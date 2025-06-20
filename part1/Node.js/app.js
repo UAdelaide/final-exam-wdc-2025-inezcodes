@@ -33,5 +33,6 @@ function seedDatabase() {
         ('emilyowner', 'emily@example.com', 'hashed654', 'owner');
     `;
 
-    const
+    const insertDogs = `
+    `;
 };
