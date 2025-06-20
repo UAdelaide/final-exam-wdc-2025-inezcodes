@@ -17,4 +17,5 @@ db.connect(err=>{
     seedDatabase(); // Insert records on startup
 });
 
-// Insert 
+// Insert test data on startup
+function seedDatabase
