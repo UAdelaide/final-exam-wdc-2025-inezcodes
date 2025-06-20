@@ -79,6 +79,8 @@ app/get(`/api/dogs`, async (req, res) => {
             if (err) throw err;
             res.json(results);
         });
-    } catch (error)
+    } catch (error){
+        res.status(500).json
+    }
     }
 });
