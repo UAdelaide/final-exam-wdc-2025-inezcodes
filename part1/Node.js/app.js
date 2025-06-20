@@ -95,6 +95,9 @@ app.get('/api/dogs', async (req, res) => {
         JOIN Users u ON d.owner_id = u.user_id
         WHERE wr.status = 'open';
         `;
-        db.query(query, (err, results))
+        db.query(query, (err, results) => {
+            if)err) throw err;
+
+        });
     }
   });
