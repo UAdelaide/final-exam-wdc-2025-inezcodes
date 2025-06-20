@@ -68,4 +68,4 @@ db.query(insertUsers, () => {
 }
 
 // /api/dogs
-app/get(`/api`)
+app/get(`/api/dogs`, async (requestAnimationFrame.res =>))
