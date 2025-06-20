@@ -5,5 +5,6 @@ const port = 8080;
 
 // Database connection
 const db = mysql.createConnection({
-    host: 'loca'
+    host: 'localhost',
+    user: 'root'
 });
