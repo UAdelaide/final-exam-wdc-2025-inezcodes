@@ -71,7 +71,7 @@ db.query(insertUsers, () => {
 app/get(`/api/dogs`, async (req, res) => {
     try {
         const query = `
-
+        SELECT d.name AS dog_name, d.size AS 
         `
     }
 })
