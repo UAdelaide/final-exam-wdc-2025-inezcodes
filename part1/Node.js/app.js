@@ -104,4 +104,5 @@ app.get('/api/dogs', async (req, res) => {
     }
   });
 
-  /
+  // /api/walkers/summary
+  app.get('')
