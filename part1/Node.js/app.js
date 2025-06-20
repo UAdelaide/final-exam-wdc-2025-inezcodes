@@ -8,5 +8,5 @@ const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '', // no password as per instructions
-    database: '',
+    database: 'DogWalkService'
 });
