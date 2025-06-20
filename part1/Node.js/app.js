@@ -56,4 +56,6 @@ function seedDatabase() {
     ((SELECT dog_id FROM Dogs WHERE name = 'Rocky'), '2025-06-12 07:30:00', 30, 'City Gardens', 'cancelled'),
     ((SELECT dog_id FROM Dogs WHERE name = 'Luna'), '2025-06-13 17:00:00', 40, 'Botanic Park', 'completed');
 `;
-};
+
+db.query(inser)
+}
