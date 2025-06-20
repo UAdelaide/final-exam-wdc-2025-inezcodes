@@ -31,7 +31,7 @@ function seedDatabase() {
         ('davidwalker', 'david@example.com', 'hashed321', 'walker'),
 
         ('emilyowner', 'emily@example.com', 'hashed654', 'owner');
+    `;
 
-
-        `;
+    const
 };
