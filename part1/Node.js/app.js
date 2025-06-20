@@ -21,5 +21,7 @@ db.connect(err=>{
 function seedDatabase() {
     const insertUsers =`
         INSERT IGNORE INTO Users (username, email, password_hash, role )
-    `;
+        VALUES
+        ()
+        `;
 };
