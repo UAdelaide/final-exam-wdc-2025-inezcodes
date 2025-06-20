@@ -35,17 +35,16 @@ function seedDatabase() {
 
     const insertDogs = `
     INSERT INTO Dogs (owner_id, name, size)
+    VALUES
+    ((SELECT user_id FROM Users WHERE username = 'alice123'),'Max', 'medium'),
 
-VALUES
+    ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
 
-((SELECT user_id FROM Users WHERE username = 'alice123'),'Max', 'medium'),
+    ((SELECT user_id FROM Users WHERE username = 'emailyowner'), 'Charlie', 'large'),
 
-((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
+    ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Rocky', 'medium'),
 
-((SELECT user_id FROM Users WHERE username = 'emailyowner'), 'Charlie', 'large'),
+    ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Luna', 'small');
+`;
 
-((SELECT user_id FROM Users WHERE username = 'alice123'), 'Rocky', 'medium'),
-
-((SELECT user_id FROM Users WHERE username = 'carol123'), 'Luna', 'small');
-    `;
 };
