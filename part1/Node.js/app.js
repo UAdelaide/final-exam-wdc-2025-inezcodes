@@ -1,5 +1,5 @@
 const express = require('express');
-const get } = require('http');
+const {get} = require('http');
 const mysql = require('mysql');
 const app = express();
 const port = 8080;
@@ -12,7 +12,7 @@ const db = mysql.createConnection({
     database: 'DogWalkService'
 });
 
-db.connect(err=>{
+db.connect(err => {
     if(err) throw err;
     console.log('Connected to MySQL');
     seedDatabase(); // Insert records on startup
