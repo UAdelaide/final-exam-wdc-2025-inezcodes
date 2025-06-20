@@ -1,3 +1,4 @@
-const express = required('express');
+const express = require('express');
 const mysql = require('mysql');
-cont app = express()
+const app = express();
+const port = 8080;
