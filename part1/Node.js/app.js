@@ -69,5 +69,9 @@ db.query(insertUsers, () => {
 
 // /api/dogs
 app/get(`/api/dogs`, async (req, res) => {
-    try
+    try {
+        const query = `
+
+        `
+    }
 })
