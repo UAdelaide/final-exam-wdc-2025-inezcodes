@@ -58,6 +58,8 @@ function seedDatabase() {
 `;
 
 db.query(insertUsers, () =>{
-    db.query(insertDogs, )
+    db.query(insertDogs, () =>{
+        db.query(insert)
+    })
 })
 }
