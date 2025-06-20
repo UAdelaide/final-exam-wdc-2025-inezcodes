@@ -47,4 +47,7 @@ function seedDatabase() {
     ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Luna', 'small');
 `;
 
+    const insertRequests =`
+    
+    `;
 };
