@@ -77,7 +77,7 @@ app/get(`/api/dogs`, async (req, res) => {
         `;
         db.query(query, (err, results) => {
             if (err) throw err;
-            res.json
-        })
+            res.json(results);
+        });
     }
 })
