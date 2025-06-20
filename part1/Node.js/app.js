@@ -4,4 +4,6 @@ const app = express();
 const port = 8080;
 
 // Database connection
-const db = mysql.createConnection()
+const db = mysql.createConnection({
+    host: 'loca'
+});
