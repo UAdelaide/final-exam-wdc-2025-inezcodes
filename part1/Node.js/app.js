@@ -1,4 +1,5 @@
 const express = require('express');
+const { get } = require('http');
 const mysql = require('mysql');
 const app = express();
 const port = 8080;
@@ -66,4 +67,5 @@ db.query(insertUsers, () => {
 });
 }
 
-//
+// /api/dogs
+app/get(`/api`)
