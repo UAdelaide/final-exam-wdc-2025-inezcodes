@@ -75,6 +75,6 @@ app/get(`/api/dogs`, async (req, res) => {
         FROM Dogs d
         JOIN Users u d.owner_id = u.user_id;
         `;
-        
+        db.query(query, (err, results))
     }
 })
