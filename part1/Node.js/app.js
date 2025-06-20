@@ -3,4 +3,5 @@ const mysql = require('mysql');
 const app = express();
 const port = 8080;
 
-//Database connection
+// Database connection
+const db = mysql.createConnection()
