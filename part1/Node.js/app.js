@@ -12,11 +12,6 @@ const db = mysql.createConnection({
     database: 'DogWalkService'
 });
 
-db.connect(err => {
-    if(err) throw err;
-    console.log('Connected to MySQL');
-    seedDatabase(); // Insert records on startup
-});
 
 // Insert test data on startup
 function seedDatabase() {
@@ -57,6 +52,12 @@ function seedDatabase() {
     ((SELECT dog_id FROM Dogs WHERE name = 'Rocky'), '2025-06-12 07:30:00', 30, 'City Gardens', 'cancelled'),
     ((SELECT dog_id FROM Dogs WHERE name = 'Luna'), '2025-06-13 17:00:00', 40, 'Botanic Park', 'completed');
 `;
+
+db.connect(err => {
+    if(err) throw err;
+    console.log('Connected to MySQL');
+    seedDatabase(); // Insert records on startup
+});
 
 db.query(insertUsers, () => {
     db.query(insertDogs, () => {
