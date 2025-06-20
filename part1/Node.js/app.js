@@ -91,7 +91,9 @@ app.get('/api/dogs', async (req, res) => {
         const query = `
         SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username
         FROM WalkRequests wr
-        Join Dogs d ON wr
+        JOIN Dogs d ON wr.dog_id = d.dog_id
+        JOIN
+
         `;
     }
   });
