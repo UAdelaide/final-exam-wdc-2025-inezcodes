@@ -18,4 +18,6 @@ db.connect(err=>{
 });
 
 // Insert test data on startup
-function seedDatabase
+function seedDatabase() {
+    const insertDatabase
+}
