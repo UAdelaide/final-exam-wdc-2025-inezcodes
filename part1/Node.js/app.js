@@ -20,5 +20,6 @@ db.connect(err=>{
 // Insert test data on startup
 function seedDatabase() {
     const insertUsers =`
+        INSERT I
     `;
 };
