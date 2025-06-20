@@ -50,6 +50,10 @@ function seedDatabase() {
     const insertRequests =`
     INSERT INTO WalkRequests (dog_id, request_time, duration_minutes, location, status)
     VALUES
-    
+    ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+  ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+  ((SELECT dog_id FROM Dogs WHERE name = 'Charlie'), '2025-06-11 10:00:00', 60, 'Riverside Trail', 'open'),
+  ((SELECT dog_id FROM Dogs WHERE name = 'Rocky'), '2025-06-12 07:30:00', 30, 'City Gardens', 'cancelled'),
+    ((SELECT dog_id FROM Dogs WHERE name = 'Luna'), '2025-06-13 17:00:00', 40, 'Botanic Park', 'completed');
     `;
 };
