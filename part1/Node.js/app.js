@@ -86,5 +86,9 @@ app.get('/api/dogs', async (req, res) => {
 
   // /api/walkrequests/open
   app.get('/api/walkrequests/open', async (req, res) => {
-    try{}
+    try{
+        const query = `
+        SELECT w
+        `;
+    }
   });
