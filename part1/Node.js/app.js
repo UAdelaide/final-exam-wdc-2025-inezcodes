@@ -68,19 +68,20 @@ db.query(insertUsers, () => {
 }
 
 // /api/dogs
-app/get(`/api/dogs`, async (req, res) => {
+app.get('/api/dogs', async (req, res) => {
     try {
-        const query = `
+      const query = `
         SELECT d.name AS dog_name, d.size, u.username AS owner_username
         FROM Dogs d
-        JOIN Users u d.owner_id = u.user_id;
-        `;
-        db.query(query, (err, results) => {
-            if (err) throw err;
-            res.json(results);
-        });
-    } catch (error){
-        res.status(500).json({error: 'Failed to fetch dogs'});
+        JOIN Users u ON d.owner_id = u.user_id;
+      `;
+      db.query(query, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+      });
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to fetch dogs' });
     }
-}
-});
+  });
+
+  // /api
