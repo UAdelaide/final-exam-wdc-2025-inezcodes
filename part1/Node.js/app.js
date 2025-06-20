@@ -14,5 +14,7 @@ const db = mysql.createConnection({
 db.connect(err=>{
     if(err) throw err;
     console.log('Connected to MySQL');
-    seedDatabase();
+    seedDatabase(); // Insert records on startup
 });
+
+// Insert 
