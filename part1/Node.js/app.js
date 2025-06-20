@@ -1,2 +1,3 @@
 const express = required('express');
-const mysql = require();
+const mysql = require('mysql');
+cont app = express()
