@@ -1,5 +1,5 @@
 const express = require('express');
-const { get } = require('http');
+const get } = require('http');
 const mysql = require('mysql');
 const app = express();
 const port = 8080;
@@ -105,4 +105,33 @@ app.get('/api/dogs', async (req, res) => {
   });
 
   // /api/walkers/summary
-  app.get('')
+  app.get('/api/walkers/summary', async (req, res) => {
+    try {
+      const query = `
+        SELECT
+          u.username AS walker_username,
+          COUNT(r.rating_id) AS total_ratings,
+          ROUND(AVG(r.rating), 1) AS average_rating,
+          (
+            SELECT COUNT(*)
+            FROM WalkApplications wa
+            JOIN WalkRequests wr ON wa.request_id = wr.request_id
+            WHERE wa.walker_id = u.user_id AND wa.status = 'accepted' AND wr.status = 'completed'
+          ) AS completed_walks
+        FROM Users u
+        LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
+        WHERE u.role = 'walker'
+        GROUP BY u.user_id;
+      `;
+      db.query(query, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+      });
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to fetch walker summary' });
+    }
+  });
+
+  app.listen(port, () => {
+    console.log(`🚀 Server running at http://localhost:${port}`);
+  });
