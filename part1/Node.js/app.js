@@ -10,3 +10,7 @@ const db = mysql.createConnection({
     password: '', // no password as per instructions
     database: 'DogWalkService'
 });
+
+db.connect(err=>{
+
+});
